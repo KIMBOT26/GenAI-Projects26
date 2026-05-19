@@ -39,7 +39,7 @@ extra:
       link: https://github.com/uhahne
   generator: false
 
-copyright: Copyright &copy; 2026 Prof. Uwe Hahne
+copyright: Copyright &copy; 2026 Prof. Uwe Hahne — Diese Seite wurde mit Unterstützung eines Hermes-Agenten erstellt.
 
 markdown_extensions:
   - pymdownx.highlight:

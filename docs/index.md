@@ -1,5 +1,8 @@
 # KI in Medienanwendungen — Praktische Projekte
 
+!!! info "KI-generiert"
+    Diese Website wurde mit Unterstützung eines **Hermes-Agenten** erstellt.
+
 Willkommen zur Dokumentationsseite für die **praktische Projektarbeit** im Kurs **„KI in Medienanwendungen“** (Sommersemester 2026).
 
 Diese Seite ergänzt die Hauptkursseite [uhahne.github.io/GenAI](https://uhahne.github.io/GenAI) und dient als zentrale Plattform für die Dokumentation, Präsentation und Archivierung aller studentischen Projekte.
