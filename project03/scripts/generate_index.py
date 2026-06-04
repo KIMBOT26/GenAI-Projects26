@@ -2,6 +2,7 @@
 """Auto-generate index.html + per-video detail pages for the gallery."""
 
 import argparse
+import datetime
 import glob
 import json
 import os
@@ -11,6 +12,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Project 3 — Generated Videos</title>
   <style>
     body {{
@@ -113,6 +117,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
 
   {video_grid}
+
+  <!-- Generated: {timestamp} -->
 
   <div class="footer">
     Generated automatically by pipeline.py | Prof. Dr. Uwe Hahne @ Hochschule Furtwangen
@@ -318,6 +324,12 @@ def generate_index(root_dir):
     videos = sorted(glob.glob(os.path.join(root_dir, "*.mp4")))
     video_names = [os.path.basename(v) for v in videos]
 
+    # Filter: skip looped intermediates and videos without a manifest
+    video_names = [
+        name for name in video_names
+        if not name.endswith("_looped.mp4") and load_manifest(root_dir, name)
+    ]
+
     if not video_names:
         grid_html = '<p class="empty">No videos yet. Run pipeline.py to generate some.</p>'
     else:
@@ -326,23 +338,15 @@ def generate_index(root_dir):
             manifest = load_manifest(root_dir, name)
             detail_name = Path(name).stem
 
-            if manifest:
-                title = manifest.get("topic", detail_name)
-                subtitle = manifest.get("subtitle", "")
-                voice = manifest.get("voice", "en-US-AriaNeural").split("-")[-1]  # short name
-                slides = len(manifest.get("slides", []))
-                if slides == 0:
-                    slides = 1
-                duration = manifest.get("duration", "N/A")
-                timestamp = manifest.get("timestamp", "")
-                if timestamp:
-                    timestamp = timestamp.replace("T", " ").split(".")[0]
-            else:
-                title = detail_name
-                voice = "default"
+            title = manifest.get("topic", detail_name)
+            voice = manifest.get("voice", "en-US-AriaNeural").split("-")[-1]  # short name
+            slides = len(manifest.get("slides", []))
+            if slides == 0:
                 slides = 1
-                duration = "N/A"
-                timestamp = ""
+            duration = manifest.get("duration", "N/A")
+            timestamp = manifest.get("timestamp", "")
+            if timestamp:
+                timestamp = timestamp.replace("T", " ").split(".")[0]
 
             cards.append(VIDEO_CARD.format(
                 filename=name,
@@ -355,7 +359,11 @@ def generate_index(root_dir):
             ))
         grid_html = f'<div class="video-grid">\n{"".join(cards)}\n</div>'
 
-    html = HTML_TEMPLATE.format(video_count=len(video_names), video_grid=grid_html)
+    html = HTML_TEMPLATE.format(
+        video_count=len(video_names),
+        video_grid=grid_html,
+        timestamp=datetime.datetime.now().isoformat()
+    )
 
     index_path = os.path.join(root_dir, "index.html")
     with open(index_path, "w", encoding="utf-8") as f:
@@ -369,6 +377,12 @@ def generate_detail_pages(root_dir):
     """Generate per-video detail pages."""
     root_dir = os.path.abspath(root_dir)
     videos = sorted(glob.glob(os.path.join(root_dir, "*.mp4")))
+
+    # Same filtering for detail pages
+    videos = [
+        v for v in videos
+        if not os.path.basename(v).endswith("_looped.mp4")
+    ]
 
     detail_dir = Path(root_dir) / "detail"
     detail_dir.mkdir(exist_ok=True)

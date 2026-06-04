@@ -10,7 +10,7 @@
 
 An automated pipeline that generates educational lecture videos with a **deepfake avatar**, **TTS narration**, and **slide overlays**. Designed for Prof. Hahne's GenAI research at HFU.
 
-**Live preview:** [https://herb-queries-clearly-seafood.trycloudflare.com](https://herb-queries-clearly-seafood.trycloudshell.com) *(ephemeral tunnel — may rotate)*
+**Live preview:** [Gallery with generated videos](https://herb-queries-clearly-seafood.trycloudflare.com)
 
 ---
 
@@ -54,14 +54,13 @@ python scripts/pipeline.py \
 
 ---
 
-## Documentation
+## Subpages
 
 | Page | Description |
 |------|-------------|
-| [**LOG →**](docs/LOG.md) | Full build log — what was implemented and when |
-| [**AUDIO API →**](docs/AUDIO_API.md) | Voice Agent integration spec — what API we need |
-| [**IMAGES →**](docs/IMAGES.md) | Avatar / Image Agent integration spec — what we need |
-| [**SETUP.md**](SETUP.md) | Full environment reproduction guide |
+| [**LOG →**](log.md) | Full build log — what was implemented and when |
+| [**AUDIO API →**](audio_api.md) | Voice Agent integration spec — what API we need |
+| [**IMAGES →**](images.md) | Avatar / Image Agent integration spec — what we need |
 
 ---
 
@@ -73,7 +72,7 @@ python scripts/pipeline.py \
 | **Voice** | `edge-tts` offline voice | Real voice clone from Voice Agent API |
 | **TTS provider** | Microsoft Edge (free) | Custom voice endpoint |
 
-The pipeline is fully functional with placeholders. Swapping to real APIs is a **drop-in replacement** — no structural changes needed. See [AUDIO_API.md](docs/AUDIO_API.md) and [IMAGES.md](docs/IMAGES.md) for the exact contract.
+The pipeline is fully functional with placeholders. Swapping to real APIs is a **drop-in replacement** — no structural changes needed.
 
 ---
 
@@ -96,12 +95,14 @@ The pipeline is fully functional with placeholders. Swapping to real APIs is a *
 
 ```
 project03/
-├── README.md              ← You are here
+├── README.md              ← Landing page (project03/)
 ├── SETUP.md               ← Full reproduction guide
-├── docs/
-│   ├── LOG.md             ← Build history
-│   ├── AUDIO_API.md       ← Voice API contract
-│   └── IMAGES.md          ← Image/avatar API contract
+├── docs/                  ← MkDocs pages for the website
+│   └── project03/
+│       ├── index.md       ← This page (overview + status)
+│       ├── log.md         ← Build history
+│       ├── audio_api.md   ← Voice API contract
+│       └── images.md      ← Image/avatar API contract
 ├── scripts/
 │   ├── pipeline.py        ← Main pipeline (4 steps + lip-sync)
 │   ├── generate_index.py  ← Gallery + detail page generator
