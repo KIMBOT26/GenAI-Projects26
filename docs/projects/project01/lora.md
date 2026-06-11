@@ -29,7 +29,12 @@ LoRA (Low-Rank Adaptation) allows you to fine-tune diffusion models with a small
    ```bash
    cd /your/path/ComfyUI/custom_nodes
    git clone https://github.com/kijai/ComfyUI-Florence2.git
-   # ... other nodes from ComfyUI_Guide.md
+   git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
+   git clone https://github.com/yolain/ComfyUI-Easy-Use.git
+   git clone https://github.com/kijai/ComfyUI-Florence2.git
+   git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git
+   git clone https://github.com/ltdrdata/was-node-suite-comfyui.git
+   git clone https://github.com/M1kep/Comfy_KepListStuff.git
    ```
 
 2. Download Florence-2 model:
