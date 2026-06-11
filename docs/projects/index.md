@@ -18,9 +18,9 @@ Jedes Projekt durchläuft folgende Phasen:
 
 | Nr. | Projekt | Kurzbeschreibung | Team |
 |-----|---------|-------------------|------|
-| 1 | [Bildgenerierung](project01.md) | Kreative Bilderzeugung mit Stable Diffusion und ComfyUI | TBA |
+| 1 | [ComfyUI: Text-to-Image & LoRA](project01/) | Bildgenerierung mit Flux, SDXL, SD 3.5 + LoRA Training | TBA |
 | 2 | [Audio/Videogenerierung](project02.md) | Erzeugung von Audio und Video mit KI-Tools | TBA |
-| 3 | [Interaktive Anwendung](project03.md) | Entwicklung einer interaktiven KI-gestützten Anwendung | TBA |
+| 3 | [GenAI Educational Media](project03/) | Talking-Head Avatar Pipeline mit Hallo2 | TBA |
 
 !!! warning "Platzhalter"
     Team-Zuweisungen und konkrete Projektbeschreibungen werden zu Semesterbeginn ergänzt.
