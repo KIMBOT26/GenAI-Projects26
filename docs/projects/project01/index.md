@@ -33,7 +33,6 @@ project01/
 │   └── Kohya_SS.md              ← LoRA training with Kohya sd-scripts
 ├── DatasetConfig/               ← LoRA training configuration
 ├── LoRA_Dataset/                ← Sample datasets
-├── LoRA_Models/                 ← Pre-trained LoRA models
 ├── Results/                     ← Sample generated images
 ├── TrainingImages/              ← Raw training images
 └── Workflows/                   ← ComfyUI workflow JSONs

@@ -243,6 +243,5 @@ A photo of TriggerWord person, standing in a modern office, professional lightin
 
 ## Next Steps
 
-- **[Sample Models →](../../project01/LoRA_Models/)** — Pre-trained LoRAs included
+- **[Results →](images.md)** — See sample outputs
 - **[Full Kohya Guide →](../../project01/docs/Kohya_SS.md)** — Detailed commands
-- **[Results →](../../project01/Results/)** — Example outputs

@@ -39,9 +39,6 @@ project01/
 │   └── DatasetConfig.toml       ← LoRA training dataset configuration
 ├── LoRA_Dataset/
 │   └── 10_UweHahne/             ← Sample dataset (images + captions)
-├── LoRA_Models/
-│   ├── UweHahneSDXL_v1.safetensors    ← Trained SDXL LoRA
-│   └── UweHahneFlux1_v1.safetensors   ← Trained Flux LoRA
 ├── Results/
 │   ├── SDXL1/                 ← Sample SDXL generations
 │   └── Flux1/                 ← Sample Flux generations
@@ -317,12 +314,9 @@ To train a LoRA for Flux 1.dev, see the [**Kohya SS Guide**](docs/Kohya_SS.md).
 
 ### Stable Diffusion XL 1.0
 
-1. Make sure to have a copy of the LoRA in the `/your/path/ComfyUI/models/loras/` folder. If you did not train your own LoRA, use the one in this repository.
+1. Make sure to have a copy of the LoRA in the `/your/path/ComfyUI/models/loras/` folder.
 
 ```bash
-# Only when using LoRA from this repo
-cp /your/path/to/repo/LoRA_Models/UweHahneSDXL_v1.safetensors /your/path/ComfyUI/models/loras/
-
 # Copy workflow
 cp /your/path/to/repo/Workflows/LoRAImageGeneration/SDXL1LoRAImageGeneration.json /your/path/ComfyUI/user/default/workflows/
 
@@ -331,12 +325,9 @@ cp /your/path/to/repo/Workflows/LoRAImageGeneration/SDXL1LoRAImageGeneration.jso
 
 ### Flux 1.dev
 
-1. Make sure you have a copy of the trained LoRA in this folder `/your/path/ComfyUI/models/loras/`. You can also use the LoRA from this repo.
+1. Make sure you have a copy of the trained LoRA in this folder `/your/path/ComfyUI/models/loras/`.
 
 ```bash
-# Only when using LoRA from this repo
-cp /your/path/to/repo/LoRA_Models/UweHahneFlux1_v1.safetensors /your/path/ComfyUI/models/loras/
-
 # Copy workflow
 cp /your/path/to/repo/Workflows/LoRAImageGeneration/Flux1LoRAImageGeneration.json /your/path/ComfyUI/user/default/workflows/
 
@@ -362,7 +353,7 @@ This repository includes sample outputs:
 
 - **`Results/SDXL1/`** — Sample images generated with SDXL 1.0
 - **`Results/Flux1/`** — Sample images generated with Flux 1.dev
-- **`LoRA_Models/`** — Pre-trained LoRA models for immediate use
+- **`Results/`** — Sample generated images
 
 ---
 

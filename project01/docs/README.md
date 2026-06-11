@@ -13,5 +13,5 @@ Detailed technical guides for ComfyUI installation, configuration, and LoRA trai
 
 - **Main README:** [../README.md](../README.md)
 - **Workflows:** [../Workflows/](../Workflows/)
-- **LoRA Models:** [../LoRA_Models/](../LoRA_Models/)
 - **Dataset Config:** [../DatasetConfig/](../DatasetConfig/)
+- **LoRA Dataset:** [../LoRA_Dataset/](../LoRA_Dataset/)

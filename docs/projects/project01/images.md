@@ -69,9 +69,7 @@ See the **[Workflows Guide](workflows.md)** for setup instructions.
 
 Want to generate personalized images? Train your own LoRA model following the **[LoRA Training Guide](lora.md)**.
 
-Pre-trained LoRA models are included in the repository:
-- `LoRA_Models/UweHahneSDXL_v1.safetensors` — SDXL 1.0 LoRA
-- `LoRA_Models/UweHahneFlux1_v1.safetensors` — Flux 1.dev LoRA
+After training, copy your LoRA to ComfyUI's models folder and use the LoRA workflows.
 
 ---
 

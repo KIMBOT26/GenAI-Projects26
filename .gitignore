@@ -8,3 +8,6 @@ env/
 dist/
 build/
 .DS_Store
+
+# Large model files (not pushed to GitHub)
+project01/LoRA_Models/*.safetensors
