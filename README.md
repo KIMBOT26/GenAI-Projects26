@@ -3,9 +3,9 @@
 MkDocs-basierte Dokumentationsseite für die praktische Projektarbeit im Kurs **„KI in Medienanwendungen“** (SoSe 2026).
 
 **Projekte:**
-- **Projekt 1** — Text-zu-Bild (Stable Diffusion)
+- **Projekt 1** — ComfyUI: Text-to-Image & LoRA Training (Flux, SDXL, SD 3.5) ← **Aktiv**
 - **Projekt 2** — Bild-zu-Bild (Inpainting / Refinement)
-- **Projekt 3** — GenAI Educational Media (Talking-Head Avatar Pipeline) ← **Aktiv**
+- **Projekt 3** — GenAI Educational Media (Talking-Head Avatar Pipeline)
 
 ## Quickstart
 

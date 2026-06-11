@@ -64,7 +64,12 @@ nav:
   - Home: index.md
   - Projekte:
     - Übersicht: projects/index.md
-    - Projekt 1: projects/project01.md
+    - Projekt 1:
+      - Übersicht: projects/project01/index.md
+      - Installation: projects/project01/installation.md
+      - Workflows: projects/project01/workflows.md
+      - LoRA Training: projects/project01/lora.md
+      - Results: projects/project01/images.md
     - Projekt 2: projects/project02.md
     - Projekt 3:
       - Übersicht: projects/project03/index.md
