@@ -39,6 +39,7 @@ LoRA (Low-Rank Adaptation) allows you to fine-tune diffusion models with a small
 
 2. Download Florence-2 model:
    ```bash
+   source ./venv/bin/activate
    hf download microsoft/Florence-2-large --local-dir models/LLM/Florence-2-large
    ```
 
