@@ -78,7 +78,7 @@ nav:
       - CosyVoice Tests: projects/project02/cosyvoice.md
       - Audio-Beispiele: projects/project02/audio.md
       - Technische Details: projects/project02/technical.md
-      - Zusammenfassung: projects\project02\summary.md
+      - Zusammenfassung: projects/project02/summary.md
     - Projekt 3:
       - Übersicht: projects/project03/index.md
       - Log: projects/project03/log.md
